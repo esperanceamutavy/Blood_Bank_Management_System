@@ -20,6 +20,7 @@
             <li><a href="hospital.php">Hospitals</a></li>
             <li><a href="bloodunit.php">Blood Units</a></li>
             <li><a href="requests.php">Blood Requests</a></li>
+            <li><a href="bloodtesting.php">Blood Testing</a> </li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -34,10 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST['gender'];
     $email = $_POST['email'];
 
-//database connectivity
+//Database connection
     $servername = "localhost";
-    $username = "root";
-    $password = "Loveyourself@1";
+    $username = "user";
+    $password = "    ";//4 spaces
     $dbname = "bloodbank_db";
 
     $conn = new mysqli($servername, $username, $password, $dbname);

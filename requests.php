@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <h1>Blood Bank Management System</h1>
+    <img src="Blood Bank.jpeg" alt="Blood Bank Logo" class="logo">
     <nav>
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
@@ -19,6 +19,7 @@
             <li><a href="hospital.php">Hospitals</a></li>
             <li><a href="bloodunit.php">Blood Units</a></li>
             <li><a href="requests.php">Blood Requests</a></li>
+            <li><a href="bloodtesting.php">Blood Testing</a> </li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -29,8 +30,14 @@
     // Define variables and initialize with empty values
     $hospital_id = $blood_group = $quantity = $request_date = $urgency = "";
 
-    // Fetch list of hospitals
-    $conn = new mysqli("localhost", "root", "Loveyourself@1", "bloodbank_db");
+    //Database connection
+    $servername = "localhost";
+    $username = "user";
+    $password = "    ";//4 spaces
+    $dbname = "bloodbank_db";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }

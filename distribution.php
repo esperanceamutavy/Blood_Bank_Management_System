@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <h1>Blood Bank Management System</h1>
+    <img src="Blood Bank.jpeg" alt="Blood Bank Logo" class="logo">
     <nav>
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
@@ -19,6 +19,7 @@
             <li><a href="hospital.php">Hospitals</a></li>
             <li><a href="bloodunit.php">Blood Units</a></li>
             <li><a href="requests.php">Blood Requests</a></li>
+            <li><a href="bloodtesting.php">Blood Testing</a> </li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -26,10 +27,10 @@
 <main>
     <h2>Blood Distribution Form</h2>
     <?php
-    // Database connection details
+    //Database connection
     $servername = "localhost";
-    $username = "root";
-    $password = "Loveyourself@1";
+    $username = "user";
+    $password = "    ";//4 spaces
     $dbname = "bloodbank_db";
 
     // Create connection

@@ -1,7 +1,8 @@
 <?php
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 // Create connection using conn variable to connect to database

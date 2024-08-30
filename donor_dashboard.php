@@ -1,7 +1,8 @@
 <?php
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -48,6 +49,7 @@ $conn->close();
 <body>
 <header>
     <img src="Blood Bank.jpeg" alt="Blood Bank Logo" class="logo">
+    <h2>Donor Dashboard</h2>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -55,7 +57,6 @@ $conn->close();
     </nav>
 </header>
 <main>
-    <h2>Donor Dashboard</h2>
     <form method="POST" action="<?php echo ($_SERVER["PHP_SELF"]); ?>">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>

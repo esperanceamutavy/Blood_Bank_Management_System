@@ -7,11 +7,12 @@ if (!isset($_SESSION['UserID']) || ($_SESSION['Role'] !== 'Nurse' && $_SESSION['
     exit;
 }
 
-// Database connection
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
+
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -82,7 +83,13 @@ $locationsResult = $conn->query($locationsQuery);
 </head>
 <body>
 <header>
+    <img src="Blood Bank.jpeg" alt="Blood Bank Logo" class="logo">
     <h2>Patient Care Dashboard</h2>
+    <nav>
+        <ul>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
     <section>

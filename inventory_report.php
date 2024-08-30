@@ -5,8 +5,14 @@ if (!isset($_SESSION['UserID']) || ($_SESSION['Role'] !== 'Admin' && $_SESSION['
     header("Location: login.php");
     exit;
 }
+//Database connection
+$servername = "localhost";
+$username = "user";
+$password = "    ";//4 spaces
+$dbname = "bloodbank_db";
 
-$conn = new mysqli("localhost", "root", "Loveyourself@1", "bloodbank_db");
+$conn = new mysqli($servername, $username, $password, $dbname);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

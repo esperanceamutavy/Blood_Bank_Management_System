@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Generic validation function
+    // General validation function
     function validateFields(fields) {
         for (const field of fields) {
             const element = document.getElementById(field.id);
+            if (!element) continue; // Skip if the element is not found
+
             if (element.value.trim() === '') {
-                alert(`Please enter  ${field.name}`);
+                alert(`Please enter ${field.name}`);
                 return false;
             }
 
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Blood testing form validation
-    document.querySelector('#bloodTestingForm').addEventListener('submit', function(e) {
+    document.querySelector('#bloodTestingForm')?.addEventListener('submit', function(e) {
         const fields = [
             { id: 'bloodUnitID', name: 'blood unit ID' },
             { id: 'HIVAIDS', name: 'HIV/AIDS status' },
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Blood unit form validation
-    document.querySelector('#bloodUnitForm').addEventListener('submit', function(e) {
+    document.querySelector('#bloodUnitForm')?.addEventListener('submit', function(e) {
         const fields = [
             { id: 'donation_id', name: 'donation ID' },
             { id: 'blood_type', name: 'blood type' },
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Distribution form validation
-    document.querySelector('#distributionForm').addEventListener('submit', function(e) {
+    document.querySelector('#distributionForm')?.addEventListener('submit', function(e) {
         const fields = [
             { id: 'request_id', name: 'request ID' },
             { id: 'blood_unit_id', name: 'blood unit ID' },
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Distribution report form validation
-    document.querySelector('#distributionReportForm').addEventListener('submit', function(e) {
+    document.querySelector('#distributionReportForm')?.addEventListener('submit', function(e) {
         const fields = [
             { id: 'start_date', name: 'start date', type: 'date' },
             { id: 'end_date', name: 'end date', type: 'date' },
@@ -111,5 +113,23 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
         }
     });
+
+    // Staff registration form validation
+    document.querySelector('#staffRegistrationForm')?.addEventListener('submit', function(e) {
+        const fields = [
+            { id: 'staff_name', name: 'staff name' },
+            { id: 'staff_position', name: 'staff position' },
+            { id: 'password', name: 'password' }
+        ];
+
+        if (!validateFields(fields)) {
+            e.preventDefault();
+        }
+    });
+
+    // Hide the password field text
+    const passwordField = document.getElementById('password');
+    if (passwordField) {
+        passwordField.type = 'password';
+    }
 });
-f

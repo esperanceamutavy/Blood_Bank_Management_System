@@ -2,10 +2,10 @@
 //initialize session
 session_start();
 
-// Database connection
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 // Create connection

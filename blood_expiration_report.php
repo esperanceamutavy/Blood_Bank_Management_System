@@ -6,10 +6,10 @@ if (!isset($_SESSION['UserID']) || ($_SESSION['Role'] !== 'Admin' && $_SESSION['
     header("Location: login.php");
     exit;
 }
-
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

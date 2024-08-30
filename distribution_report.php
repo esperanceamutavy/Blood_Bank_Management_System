@@ -1,8 +1,12 @@
 <?php
 session_start();
 
-// Database connection
-$conn = new mysqli("localhost", "root", "Loveyourself@1", "bloodbank_db");
+//Database connection
+$servername = "localhost";
+$username = "user";
+$password = "    ";//4 spaces
+$dbname = "bloodbank_db";
+
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

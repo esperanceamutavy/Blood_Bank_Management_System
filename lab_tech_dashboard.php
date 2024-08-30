@@ -7,10 +7,11 @@ if (!isset($_SESSION['UserID']) || $_SESSION['Role'] !== 'Lab Technician') {
     exit;
 }
 
-// Database connection
+
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

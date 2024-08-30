@@ -1,8 +1,8 @@
 <?php
-// Database connection
+//Database connection
 $servername = "localhost";
-$username = "root";
-$password = "Loveyourself@1";
+$username = "user";
+$password = "    ";//4 spaces
 $dbname = "bloodbank_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -54,9 +54,10 @@ $results = $conn->query($fetchQuery);
     </head>
     <body>
     <header>
-        <h1>Blood Bank Management System</h1>
+        <img src="Blood Bank.jpeg" alt="Blood Bank Logo" class="logo">
         <nav>
             <ul>
+                <li><a href="admin_dashboard.php">Dashboard</a></li>
                 <li><a href="donor.php">Donors</a></li>
                 <li><a href="donation.php">Donations</a></li>
                 <li><a href="distribution.php">Distributions</a></li>
